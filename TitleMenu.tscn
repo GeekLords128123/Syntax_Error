@@ -1,0 +1,233 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://more fonts/KiriFont.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://UI/grey_button04.png" type="Texture" id=2]
+[ext_resource path="res://UI/WhatsApp Image 2022-03-13 at 02.50.33.jpeg" type="Texture" id=3]
+[ext_resource path="res://UI/WhatsApp Image 2022-03-13 at 02.50.23.jpeg" type="Texture" id=4]
+[ext_resource path="res://UI/WhatsApp Image 2022-03-13 at 02.51.13.jpeg" type="Texture" id=5]
+[ext_resource path="res://UI/grey_button13.png" type="Texture" id=6]
+[ext_resource path="res://more fonts/Sniglet-Regular.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://UI/arrow-Right.png" type="Texture" id=8]
+[ext_resource path="res://UI/arrow-left.png" type="Texture" id=9]
+[ext_resource path="res://PlayButton.gd" type="Script" id=10]
+[ext_resource path="res://Level1.tscn" type="PackedScene" id=11]
+
+[sub_resource type="DynamicFont" id=1]
+size = 70
+outline_size = 2
+outline_color = Color( 0.945098, 0.952941, 0.0431373, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.121569, 0.00784314, 0.113725, 0.380392 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="DynamicFont" id=3]
+size = 20
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 26
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 30
+outline_color = Color( 0.92549, 0.94902, 0.0705882, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 40
+font_data = ExtResource( 1 )
+
+[node name="titlemenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 2155.0
+margin_bottom = 1112.0
+color = Color( 0.14902, 0, 0.443137, 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 110.0
+margin_top = 76.0
+margin_right = 861.0
+margin_bottom = 147.0
+custom_colors/font_color = Color( 0.329412, 0.462745, 1, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Platformer Game!"
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 26.944
+margin_top = 361.594
+margin_right = 388.944
+margin_bottom = 567.594
+rect_pivot_offset = Vector2( 221.056, 159.406 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="Spaceicon" type="TextureRect" parent="Panel"]
+margin_left = 51.056
+margin_top = 91.406
+margin_right = 204.056
+margin_bottom = 124.406
+texture = ExtResource( 2 )
+expand = true
+
+[node name="Space" type="Label" parent="Panel/Spaceicon"]
+margin_left = 37.0
+margin_top = 9.0
+margin_right = 158.0
+margin_bottom = 58.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "space"
+
+[node name="Jump!" type="Label" parent="Panel/Spaceicon"]
+margin_left = 170.0
+margin_top = 2.0
+margin_right = 257.0
+margin_bottom = 39.0
+rect_pivot_offset = Vector2( -623, -228 )
+custom_fonts/font = SubResource( 4 )
+text = "=JUMP!"
+
+[node name="Controls" type="Label" parent="Panel"]
+margin_left = 5.056
+margin_top = 9.40601
+margin_right = 205.056
+margin_bottom = 39.406
+custom_colors/font_color = Color( 0.917647, 0.960784, 0.192157, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "Controls:"
+
+[node name="Jump!" type="Label" parent="Panel"]
+margin_left = 219.056
+margin_top = 147.406
+margin_right = 306.056
+margin_bottom = 184.406
+rect_pivot_offset = Vector2( -650, -217 )
+custom_fonts/font = SubResource( 4 )
+text = "=MOVE!"
+
+[node name="Panel" type="Panel" parent="Panel"]
+margin_left = 574.056
+margin_top = -0.593994
+margin_right = 936.056
+margin_bottom = 205.406
+custom_styles/panel = SubResource( 2 )
+
+[node name="TextureRect" type="TextureRect" parent="Panel/Panel"]
+margin_left = 21.0
+margin_top = 51.0
+margin_right = 92.0
+margin_bottom = 113.0
+texture = ExtResource( 4 )
+expand = true
+
+[node name="Label2" type="Label" parent="Panel/Panel/TextureRect"]
+margin_left = 79.0
+margin_top = 16.0
+margin_right = 153.0
+margin_bottom = 53.0
+custom_fonts/font = SubResource( 4 )
+text = "=YOU"
+
+[node name="Label3" type="Label" parent="Panel/Panel"]
+margin_left = 5.056
+margin_top = 9.40601
+margin_right = 205.056
+margin_bottom = 39.406
+custom_colors/font_color = Color( 0.917647, 0.960784, 0.192157, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "Items:"
+
+[node name="TextureRect2" type="TextureRect" parent="Panel/Panel"]
+margin_left = 175.0
+margin_top = 52.0
+margin_right = 246.0
+margin_bottom = 114.0
+rect_pivot_offset = Vector2( -1139, -162 )
+texture = ExtResource( 5 )
+expand = true
+
+[node name="Label2" type="Label" parent="Panel/Panel/TextureRect2"]
+margin_left = 79.0
+margin_top = 16.0
+margin_right = 153.0
+margin_bottom = 53.0
+custom_fonts/font = SubResource( 4 )
+text = "=devil"
+
+[node name="TextureRect3" type="TextureRect" parent="Panel/Panel"]
+margin_left = 147.0
+margin_top = 133.0
+margin_right = 203.0
+margin_bottom = 181.0
+rect_pivot_offset = Vector2( -1193, -169 )
+texture = ExtResource( 3 )
+expand = true
+
+[node name="Label2" type="Label" parent="Panel/Panel/TextureRect3"]
+margin_left = 72.0
+margin_top = 9.0
+margin_right = 146.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 4 )
+text = "to win"
+
+[node name="Label3" type="Label" parent="Panel/Panel/TextureRect3"]
+margin_left = -120.0
+margin_top = 9.0
+margin_right = -7.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 4 )
+text = "collect 50"
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+margin_left = 70.056
+margin_top = 145.406
+margin_right = 110.056
+margin_bottom = 185.406
+texture = ExtResource( 6 )
+
+[node name="TextureRect" type="TextureRect" parent="Panel/TextureRect"]
+margin_left = 3.0
+margin_top = 2.0
+margin_right = 43.0
+margin_bottom = 42.0
+texture = ExtResource( 9 )
+expand = true
+
+[node name="TextureRect2" type="TextureRect" parent="Panel/TextureRect"]
+margin_left = 65.0
+margin_top = 1.0
+margin_right = 114.0
+margin_bottom = 46.0
+texture = ExtResource( 6 )
+
+[node name="TextureRect" type="TextureRect" parent="Panel/TextureRect/TextureRect2"]
+margin_left = 6.0
+margin_top = 2.0
+margin_right = 46.0
+margin_bottom = 42.0
+texture = ExtResource( 8 )
+expand = true
+
+[node name="PlayButton" type="Button" parent="."]
+margin_left = 360.0
+margin_top = 217.0
+margin_right = 609.0
+margin_bottom = 294.0
+custom_colors/font_color = Color( 0.443137, 0.882353, 0.145098, 1 )
+custom_colors/font_color_hover = Color( 0.0980392, 0.980392, 0.0196078, 1 )
+custom_colors/font_color_pressed = Color( 0.396078, 0.713726, 0.196078, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "PLAy!"
+flat = true
+script = ExtResource( 10 )
+next_scene = ExtResource( 11 )
+
+[connection signal="pressed" from="PlayButton" to="PlayButton" method="_on_PlayButton_pressed"]

@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://more fonts/KiriFont.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://more fonts/Sniglet-Regular.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 78
+outline_size = 3
+outline_color = Color( 0.996078, 0.658824, 0.00392157, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 35
+outline_size = 1
+outline_color = Color( 0.984314, 0.054902, 0.180392, 1 )
+font_data = ExtResource( 2 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0.0235294, 0.929412, 0.94902, 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 218.0
+margin_top = 121.0
+margin_right = 798.0
+margin_bottom = 199.0
+custom_colors/font_color = Color( 0.917647, 0.996078, 0.00784314, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "YOU WIN!!!!"
+
+[node name="Button" type="Button" parent="."]
+margin_left = 333.0
+margin_top = 345.0
+margin_right = 653.0
+margin_bottom = 462.0
+custom_colors/font_color = Color( 0.980392, 0.0392157, 0.964706, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "MAIN MENU"
+flat = true
